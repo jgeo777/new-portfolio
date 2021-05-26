@@ -8,21 +8,47 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <header className="header">
+      <div className="header__intro">
+      <h1>Hi, I'm Jordan</h1>
+      <p>
+        A self-taught full-stack engineer, with a penchant for front-end development, but able to do both. Expertise lies in HTML, CSS, JavaScript, Node.js, React, SQL & PostgreSQL.
+        Previous commercial experience within the tech industry in a number of roles, from customer service to tech support. Recognised as a fast learner, determined, competent and friendly.      
+      </p>
+      </div>
+      </header>
+      <section className="projects">
+        <div className="projects__card">
+          <div className="projects__card--description">
+            <h2>Crown Clothing</h2>
+            <p>A full-stack React.js application of an example online shopping website, complete with products and prices for various categories. Firebase was implemented to store data and to provide a Google Sign-in Authentication, while the Stripe API was integrated to complete payment(s).</p>        
+          </div>
+          <div className="projects__card--links">
+            <a href="https://github.com/jgeo777/crown-clothing">Repo</a>
+            <a href="https://crown-app-live-version.herokuapp.com/">Project</a>          
+          </div>
+        </div>
+        <div className="projects__card">
+          <div className="projects__card--description">
+            <h2>SmartBrain</h2>
+            <p>A full-stack web application created using various front-end tools including HTML, CSS, React and Node.js. The Clarifai API was integrated to detect the faces. Upon URL entry, the API will locate and highlight the face(s) in the image using a blue square for each. User accounts must also be created to keep track of the user's entries.</p> 
+          </div>
+          <div className="projects__card--links">
+            <a href="https://github.com/jgeo777/smart-brain">Repo</a>
+            <a href="https://smart-brain-fe-server.herokuapp.com/">Project</a>           
+          </div>
+        </div>
+        <div className="projects__card">
+        <div className="projects__card--description">
+          <h2>YelpCamp</h2>
+          <p>A full-stack web application of a database of campgrounds/other places of interest to visit, displaying pricing information when clicked on and showing user reviews/comments. Users can also add new places of interest to the website.</p>        
+        </div>
+        <div className="projects__card--links">
+          <a href="https://github.com/jgeo777/yelp-camp-refactored">Repo</a>
+          <a href="https://secure-inlet-43618.herokuapp.com/">Project</a>        
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 

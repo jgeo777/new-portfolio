@@ -8,8 +8,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
-import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,23 +25,30 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
+      <div 
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
         }}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
+        <main 
+            style={{
+              flexGrow: 1,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        {children}
+        </main>
+        <footer className="footer">
+        <div className="footer__socials">
+          <a href="https://linkedin.com/in/jordan-george5/"><FaLinkedin /></a>
+          <a href="https://github.com/jgeo777"><FaGithub /></a>
+          <a href="mailto:jordan.geo777@gmail.com"><FaEnvelope /></a>
+        </div>
+        <div className="footer__attributions">
+          <a href="https://www.vecteezy.com/free-vector/star">Star Vectors by Vecteezy</a>
+          © {new Date().getFullYear()}, Built by Jordan George
+        </div>
         </footer>
       </div>
     </>
