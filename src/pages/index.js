@@ -39,15 +39,25 @@ const IndexPage = () => (
           </div>
         </div>
         <div className="projects__card">
+          <div className="projects__card--description">
+            <h2>YelpCamp</h2>
+            <p>A full-stack web application of a database of campgrounds/other places of interest to visit, displaying pricing information when clicked on and showing user reviews/comments. Users can also add new places of interest to the website.</p>        
+          </div>
+          <div className="projects__card--links">
+            <a href="https://github.com/jgeo777/yelp-camp-refactored">Repo</a>
+            <a href="https://secure-inlet-43618.herokuapp.com/">Project</a>        
+          </div>
+        </div>
+      <div className="projects__card">
         <div className="projects__card--description">
-          <h2>YelpCamp</h2>
-          <p>A full-stack web application of a database of campgrounds/other places of interest to visit, displaying pricing information when clicked on and showing user reviews/comments. Users can also add new places of interest to the website.</p>        
+          <h2>Movie Database</h2>
+          <p>A full-stack React.js application of an online movie database, displaying all key information such as the movie titles, synopses, cast and related financial information (budget and revenue). The app has been styled using styled components, and TypeScript will later be implemented to refactor and optimise the code.</p>        
         </div>
         <div className="projects__card--links">
-          <a href="https://github.com/jgeo777/yelp-camp-refactored">Repo</a>
-          <a href="https://secure-inlet-43618.herokuapp.com/">Project</a>        
+          <a href="https://github.com/jgeo777/movie-database">Repo</a>
+          <a href="https://jg-movie-website.netlify.app/">Project</a>          
         </div>
-      </div>
+      </div>      
     </section>
   </Layout>
 )
